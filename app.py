@@ -1,4 +1,4 @@
-from db import db
+# from db import db
 from security import authenticate, identity
 from flask import Flask
 # reqparse ensures we pass only certain
@@ -22,9 +22,9 @@ api = Api(app)
 # tell SQLAlchemy to create table for you
 
 
-@app.before_first_request  # runs before any requests
-def create_tables():
-    db.create_all()
+# @app.before_first_request  # runs before any requests
+# def create_tables():
+#     db.create_all()
 
 
 # JWT creates a new endpoint i.e. /auth -> username, and password required
